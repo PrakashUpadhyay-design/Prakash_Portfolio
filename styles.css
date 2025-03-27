@@ -1,0 +1,664 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family:'';
+  box-sizing: border-box;
+}
+body{
+  background: linear-gradient(to right, #1e1e1e, #2a2a2a);
+
+  /* background:rgb(51, 51, 55); */
+  color: white;
+  
+}
+
+#header {
+  width: 100%;
+  height: 100vh;
+  /* background-image: url(/images/background\ \(1\).png) ; */
+  background-size:80;
+  background-position: right; /* Positions image on the left */
+  background-repeat: no-repeat;
+  filter: brightness(1.1) contrast(1.2); /* Enhances quality */
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow effect */
+}
+.container{
+  padding: 10px 3%;
+  
+
+}
+
+nav {
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+
+.logo {
+  width: 170px; /* Adjust size */
+  height: auto;
+  position: absolute; /* Positioning */
+  top: 10px; /* Adjust top distance */
+  left: 30px; /* Move to the left */
+  transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+  filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.3));
+  animation: floatAnimation 3s ease-in-out infinite;
+}
+
+
+/* Hover Effects */
+.logo:hover {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5)) brightness(1.2);
+}
+
+/* Keyframe Animations */
+@keyframes floatAnimation {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.7); }
+  100% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.3); }
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin-left:auto; /* Moves the nav links to the right */
+  gap: 55px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+  
+
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  position: relative;
+
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: rgb(188, 158, 48);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: .5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 180px; /* Space between image and text */
+  margin-top: 10px;
+ 
+}
+
+.header-img {
+  width: 400px; /* Maintains your size */
+  height: 580px;
+  border-radius: 70%; /* Soft rounded look */
+  object-fit: cover;
+  margin-top: 120px;
+  margin-bottom: 20px;
+  background-blend-mode: multiply; /* Helps blend with background */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4); /* Premium soft shadow */
+  transition: transform 0.6s ease, box-shadow 0.6s ease, filter 0.6s ease;
+  animation: fadeInZoom 1.5s ease-out, floatEffect 5s infinite ease-in-out;
+}
+
+/* 🔥 On Hover: More Depth & Glow */
+.header-img:hover {
+  transform: scale(1.08) rotate(3deg);
+  box-shadow: 0px 15px 45px rgba(255, 105, 180, 0.5); /* Pinkish glow */
+  filter: brightness(1.1) contrast(1.05);
+}
+
+/* ✨ Smooth Fade-in & Zoom Animation */
+@keyframes fadeInZoom {
+  0% {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* 🌊 Floating Effect for a Premium Feel */
+@keyframes floatEffect {
+  0% {
+      transform: translateY(0px);
+  }
+  50% {
+      transform: translateY(-15px);
+  }
+  100% {
+      transform: translateY(0px);
+  }
+}
+
+/* 📱 Responsive Tweaks */
+@media (max-width: 768px) {
+  .header-img {
+      width: 300px;
+      height: 450px;
+      margin-top: 80px;
+  }
+}
+
+.header-text{
+  margin-top: 20%;
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+.header-text h1{
+  font-size: 50px;
+  margin-top: 20px;
+  
+}
+.header-text h1 span{
+  color: rgb(235, 185, 119);
+}
+.about-me {
+  
+  text-align: center;
+  max-width: 750px;
+  margin: 100px auto;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 25px;
+  background: linear-gradient(135deg, #ddb30d, #8a8680);
+  color: white;
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  line-height: 1.6; /* Improves readability */
+}
+.about-me h1{
+  text-transform: uppercase;
+}
+/* 🔥 Elegant Hover Effect */
+.about-me:hover {
+  transform: scale(1.06);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* 📱 Mobile-Friendly Adjustments */
+@media (max-width: 768px) {
+  .about-me {
+    font-size: 18px;
+    padding: 20px;
+    max-width: 90%;
+  }
+}
+
+
+.projects{
+  
+    background-color: rgb(95, 92, 132); /* Dark background */
+    
+}
+h2 {
+  text-align: center;
+  font-size: 36px; /* Increase font size */
+  color: white; /* White text color */
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+
+  
+}
+
+/* Project Container */
+.projects-container {
+    display: flex;
+    justify-content: space-between; /* Adjusts spacing between cards */
+    gap: 10px; /* Adds spacing between each card */
+    flex-wrap: wrap; /* Ensures responsiveness */
+   
+}
+
+.project-card {
+  background: linear-gradient(135deg, #ddb30d, #8a8680);
+    border-radius: 50px;
+    overflow: hidden;
+    width: 30%; /* Adjust as needed */
+    height: 70%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 5px;
+    margin-top: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-card img {
+    width: 100%;
+    height: 60%;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    margin: 10px 0;
+    font-size: 2em;
+}
+
+.project-info p {
+    font-size: 1em;
+    color: #f9f4f4;
+}
+
+.project-info a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.project-info a:hover {
+    background: #ccb322;
+    transition: 0.3s;
+}
+
+.resume-box {
+  background: linear-gradient(135deg, #ddb30d, #8a8680);
+  padding: 40px;
+  border-radius: 50px;
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+  transform: scale(1); /* Change from 1.05 to 1 */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.resume-box:hover {
+  transform: scale(1.07); /* Slightly increase the scale */
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+.resume-box h2 {
+  font-size: 32px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.resume-box p {
+  font-size: 20px;
+  color: #f4f4f4;
+  margin-bottom: 20px;
+}
+
+.resume-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  /* transition: background 0.3s ease; */
+}
+
+.resume-btn:hover {
+  background: #cfbc14;
+}
+/* Contact Section */
+.contact-box {
+  background: linear-gradient(135deg, rgba(221, 179, 13, 0.9), rgba(138, 134, 128, 0.9));
+  padding: 50px;
+  border-radius: 50px;
+  max-width: 1000px;
+  margin: 50px auto;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px); /* Glass effect */
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.contact-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Heading */
+.contact-box h2 {
+  font-size: 42px;
+  color: white;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Contact Container */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: left;
+  gap: 15px;
+}
+
+/* Left: Contact Info */
+.contact-info {
+  width: 48%;
+  color: white;
+}
+
+.contact-info h3 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: white;
+}
+
+.contact-info p {
+  font-size: 20px;
+  margin: 8px 0;
+}
+
+.contact-info a {
+  color: #1756dd;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-info a:hover {
+  color: #f3e30d;
+  text-decoration: underline;
+}
+
+/* Right: Contact Form */
+.contact-form {
+  width: 48%;
+}
+
+.contact-form h3 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color:white;
+  font-weight: bold;
+}
+
+/* Input Fields */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+
+/* Input Focus Effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ffeb3b;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(255, 235, 59, 0.8);
+}
+
+/* Textarea */
+.contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Submit Button */
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color:white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.contact-form button:hover {
+  background: #cfbc14;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-info, .contact-form {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .contact-form input, .contact-form textarea {
+    font-size: 16px;
+  }
+}
+
+
+.footer {
+  background: linear-gradient(135deg, #080808,rgb(121, 121, 28)); /* Deep modern gradient */
+  padding: 30px 20px;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  margin-top: 10px;
+  border-radius: 30px 30px 0 0;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle animated glow effect */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: pulse 6s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.1;
+  }
+}
+
+.footer-content {
+  max-width: 1000px;
+  height: 90px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+/* Stylish Footer Links */
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #f5c242;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-links a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #f5c242;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-links a:hover::after {
+  transform: scaleX(1);
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Copyright Text Animation */
+.footer-content p {
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.footer-content p:hover {
+  opacity: 1;
+}
+
+
+/* Responsive */
+
+@media only screen and (max-width: 600px) {
+  /* Adjust header */
+  #header {
+    height: auto;
+    text-align: center;
+    padding: 50px 0;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .header-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+  }
+
+  .header-text {
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  .header-text h1 {
+    font-size: 40px;
+  }
+
+  /* Adjust navigation */
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    padding: 0;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  /* Adjust about-me */
+  .about-me {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  /* Adjust projects */
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+
+  /* Adjust resume */
+  .resume-box {
+    max-width: 90%;
+    padding: 30px;
+  }
+
+  /* Adjust contact */
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info, .contact-form {
+    width: 100%;
+  }
+
+  .contact-form input, 
+  .contact-form textarea {
+    font-size: 16px;
+  }
+
+  .contact-form button {
+    font-size: 18px;
+  }
+
+}
+
