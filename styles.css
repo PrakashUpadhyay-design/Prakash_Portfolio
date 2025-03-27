@@ -3,6 +3,7 @@
   padding: 0;
   font-family:'';
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 body{
   background: linear-gradient(to right, #1e1e1e, #2a2a2a);
@@ -166,6 +167,9 @@ nav ul li a:hover::after {
       height: 450px;
       margin-top: 80px;
   }
+  nav ul {
+    gap: 17px;
+  }
 }
 
 .header-text{
@@ -211,8 +215,13 @@ nav ul li a:hover::after {
     font-size: 18px;
     padding: 20px;
     max-width: 90%;
+    }
+    .logo{
+      margin-left: 60px;
+
+    }
   }
-}
+
 
 
 .projects{
@@ -612,6 +621,7 @@ h2 {
 
   nav ul {
     padding: 0;
+    
   }
 
   nav ul li {
