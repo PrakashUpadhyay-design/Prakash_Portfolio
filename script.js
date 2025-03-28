@@ -1,17 +1,4 @@
-// const roles = ["UI Designer", "Web Developer", "Aspiring Business Analyst"];
-//     let i = 0;
-    
-//     function typeEffect() {
-//         document.getElementById("typing-text").textContent = roles[i];
-//         i = (i + 1) % roles.length;
-//     }
-    
-//     setInterval(typeEffect, 2000); // Change text every 2 seconds
-const roles = ["UI Designer", "Web Developer", "Aspiring Business Analyst"];
-    let currentText = "";
-    let wordIndex = 0;
-    let letterIndex = 0;
-    let isDeleting = false;
+
 
     function typeEffect() {
         const target = document.getElementById("typing-text");
@@ -38,5 +25,19 @@ const roles = ["UI Designer", "Web Developer", "Aspiring Business Analyst"];
 
         setTimeout(typeEffect, speed);
     }
+    
+
+    
+    const roles = ["UI Designer !", "Web Developer !", "Aspiring Business Analyst !"];
+    let index = 0;
+    const typingText = document.getElementById("typing-text");
+
+    function changeText() {
+        typingText.textContent = roles[index]; 
+        index = (index + 1) % roles.length; 
+    }
+
+    setInterval(changeText, 2000); // Change text every 2 seconds
+    changeText(); // Initial call
 
     

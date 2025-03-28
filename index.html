@@ -6,8 +6,11 @@
     <title>Prakash Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    
+
 </head>
 <body>
+    
     <!-- <div class="popup" id="welcomePopup">
         <div class="popup-content">
             <h2>Namaste Welcome to my page!</h2>
@@ -15,11 +18,11 @@
             <button onclick="closePopup()">Close</button>
         </div>
     </div> -->
+   
+    
     <header id="header">
         <div class="container">
             <nav>
-                
-
                 <img src="Prakashlogo-removebg-preview.png" class="logo" alt="Prakash Logo">
                 <ul class="nav-links">
                     <li><a href="#header">Home</a></li>
@@ -34,11 +37,10 @@
             <div class="header">
                 <img src="background (1) (1).png" alt="Profile Image" class="header-img">
                 <div class="header-text">
-                    <p id="typing-text">UI Designer | Web Developer | Aspiring Business Analyst</p>
+                    <p id="typing-text"></p>
                     <h1>I'm <span>Prakash</span> Upadhyay <br>From Nepal</h1>
                 </div>
             </div>
-            
         </div>
     </header>
     
@@ -59,7 +61,7 @@
         <h2>My Projects</h2>
         <div class="projects-container">
             <div class="project-card">
-                <img src="./images/project1.png" alt="Project 1">
+                <img src="project1.png" alt="Project 1">
                 <div class="project-info">
                     <h3>Tourism UI</h3>
                     <p>Online management of tourism place </p>
@@ -68,7 +70,7 @@
             </div>
         
             <div class="project-card">
-                <img src="./images/download (1).jpeg" alt="Project 2">
+                <img src="download (1).jpeg" alt="Project 2">
                 <div class="project-info">
                     <h3>Portfolio Website</h3>
                     <p>Personal portfolio showcasing skills and projects.</p>
@@ -77,7 +79,7 @@
             </div>
         
             <div class="project-card">
-                <img src="./images/download (1).jpeg" alt="Project 3">
+                <img src="download (1).jpeg" alt="Project 3">
                 <div class="project-info">
                     <h3>Business Landing Page</h3>
                     <p>Modern landing page for a startup business.</p>
@@ -85,7 +87,7 @@
                 </div>
             </div>
             <div class="project-card">
-                <img src="./images/download (1).jpeg" alt="Project 2">
+                <img src="download (1).jpeg" alt="Project 2">
                 <div class="project-info">
                     <h3>Portfolio Website</h3>
                     <p>Personal portfolio showcasing skills and projects.</p>
@@ -93,7 +95,7 @@
                 </div>
             </div>
             <div class="project-card">
-                <img src="./images/download (1).jpeg" alt="Project 2">
+                <img src="download (1).jpeg" alt="Project 2">
                 <div class="project-info">
                     <h3>Portfolio Website</h3>
                     <p>Personal portfolio showcasing skills and projects.</p>
@@ -101,7 +103,7 @@
                 </div>
             </div>
             <div class="project-card">
-                <img src="./images/download (1).jpeg" alt="Project 2">
+                <img src="download (1).jpeg" alt="Project 2">
                 <div class="project-info">
                     <h3>Portfolio Website</h3>
                     <p>Personal portfolio showcasing skills and projects.</p>
@@ -134,18 +136,21 @@
             </div>
             <div class="contact-form">
                 <h3>Send a Message</h3>
-               
-                
+            
+                <form action="https://formsubmit.co/prakashu788@gmail.com" method="POST">
+                    <!-- Disable CAPTCHA -->
                     <input type="hidden" name="_captcha" value="false">
-                    <form action="https://formsubmit.co/prakashu788@gmail.com" method="POST">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="message" placeholder="Your Message" required></textarea>
-                        <button type="submit">Send</button>
-                    </form>
                     
-
+                    <!-- Custom Thank You Page (Optional) -->
+                    <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+                    
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
             </div>
+            
         </div>
     </section>
     
@@ -155,7 +160,7 @@
             <div class="footer-links">
                 <a href="https://www.facebook.com/genious.prakash.7" target="_blank">Facebook</a>
                 <a href="https://www.instagram.com/geniousprakash/?hl=en" target="_blank">Instagram</a> 
-                <a href="mailto:prakashu788@gmail.com">Email</a> 
+                
             </div>
         </div>
     </footer> 
