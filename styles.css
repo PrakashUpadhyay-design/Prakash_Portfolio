@@ -170,12 +170,19 @@ nav ul li a:hover::after {
 /* 📱 Responsive Tweaks */
 @media (max-width: 768px) {
   .header-img {
-      width: 300px;
-      height: 450px;
-      margin-top: 80px;
+    width: 90%; /* Adjusted width for better responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 60px;
+    object-fit: cover; /* Ensures the image fills the area without distortion */
+    object-position: center top; /* Adjusts the focus on your face */
+    max-height: 450px; /* Prevents excessive cropping */
+    margin-right: 45px;
+  }
+  .header{
+    height: 700px;
   }
   nav ul {
-    gap: 17px;
+    gap: 20px;
   }
 }
 
@@ -234,12 +241,12 @@ nav ul li a:hover::after {
 /* 📱 Mobile-Friendly Adjustments */
 @media (max-width: 768px) {
   .about-me {
-    font-size: 18px;
+    font-size: 16px;
     padding: 20px;
     max-width: 90%;
     }
     .logo{
-      margin-left: 60px;
+      margin-left: 80px;
 
     }
   }
@@ -265,13 +272,14 @@ h2 {
 /* Project Container */
 .projects-container {
     display: flex;
-    justify-content: space-between; /* Adjusts spacing between cards */
+    justify-content: center;
     gap: 10px; /* Adds spacing between each card */
     flex-wrap: wrap; /* Ensures responsiveness */
    
 }
 
 .project-card {
+  width: 300px;
   background: linear-gradient(135deg, #ddb30d, #8a8680);
     border-radius: 50px;
     overflow: hidden;
@@ -289,10 +297,10 @@ h2 {
 }
 
 .project-card img {
-    width: 100%;
-    height: 60%;
-    border-radius: 40px;
-    object-fit: cover;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 40px;
 }
 
 .project-info {
@@ -323,7 +331,28 @@ h2 {
 .project-info a:hover {
     background: #ccb322;
     transition: 0.3s;
+}@media (max-width: 480px) {
+  .projects-container {
+      grid-template-columns: 1fr;
+  }
+  .project-card {
+      width: 100%;
+  }
+  .project-card img {
+      height: 120px;
+  }
+  .project-info h3 {
+      font-size: 0.8em;
+  }
+  .project-info p {
+      font-size: 0.5em;
+  }
+  .project-info a {
+      font-size: 0.5em;
+      padding: 4px 8px;
+  }
 }
+
 
 .resume-box {
   text-align: center;
@@ -382,6 +411,25 @@ h2 {
 
 .resume-btn:hover {
   background: #cfbc14;
+}
+@media (max-width: 768px) {
+  .resume-box {
+    max-width: 90%; /* Adjust width for smaller screens */
+    font-size: 15px; /* Reduce font size for readability */
+    padding: 13px; /* Reduce padding */
+    border-radius: 50px; /* Adjust border-radius */
+    margin: 30px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-box {
+    max-width: 95%; /* Further adjust width */
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 20px auto;
+  }
 }
 /* Contact Section */
 .contact-box {
